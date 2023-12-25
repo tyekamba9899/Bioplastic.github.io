@@ -21,29 +21,11 @@ h1 {
     margin-bottom: 20px;
 }
 
-.selection-area,
-.electricity-rate-area,
-.results-area {
+.selection-area, .input-section, .results {
     margin-bottom: 20px;
 }
 
-.section {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    background-color: #f8f8f8;
-}
-
-.section h2 {
-    color: #0056b3;
-    margin-bottom: 15px;
-}
-
-.label,
-.inputs-container label,
-.inputs-container input,
-.selection-area select {
+label, select, input, button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -52,33 +34,36 @@ h1 {
     font-size: 16px;
 }
 
-.inputs-container label {
-    display: block;
-    color: #555;
-    margin-bottom: 5px;
-}
-
 button#submit {
-    width: 100%;
-    padding: 15px;
-    background-color: #007bff;
+    padding: 10px 20px;
+    background-color: #5cb85c;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 16px;
 }
 
 button#submit:hover {
-    background-color: #0056b3;
+    background-color: #4cae4c;
 }
 
 .results div {
-    margin-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .results span {
-    font-weight: bold;
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    label, select, input, button {
+        font-size: 14px;
+    }
 }
