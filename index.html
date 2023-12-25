@@ -20,36 +20,44 @@
             </select>
         </div>
 
-        <div class="electricity-rate-area">
-            <label for="electricity-rate">Electricity Rate (USD/kWh):</label>
-            <input type="number" id="electricity-rate" placeholder="Enter electricity rate" min="0" step="any">
-        </div>
-
-        <div class="section raw-materials-section">
+        <div class="cost-inputs">
             <h2>Raw Materials</h2>
-            <div id="rawMaterialsContainer" class="inputs-container">
-                <!-- Raw material input fields will be inserted here by JavaScript -->
+            <div id="rawMaterialsContainer">
+                <!-- Raw materials inputs will be generated here by JavaScript -->
             </div>
-        </div>
-
-        <div class="section machinery-section">
+            
             <h2>Machinery</h2>
-            <div id="machineryContainer" class="inputs-container">
-                <!-- Machinery input fields will be inserted here by JavaScript -->
+            <div id="machineryContainer">
+                <!-- Machinery inputs will be generated here by JavaScript -->
+            </div>
+
+            <h2>Additional Costs</h2>
+            <div id="additionalCostsContainer">
+                <label for="electricityRate">Electricity Rate (USD/kWh):</label>
+                <input type="number" id="electricityRate" placeholder="Enter electricity rate" min="0" step="any">
+                
+                <label for="transportation">Transportation Cost (% of Material Cost):</label>
+                <input type="number" id="transportation" placeholder="Enter transportation percentage" min="0" step="any">
+                
+                <label for="storage">Storage Cost (% of Material Cost):</label>
+                <input type="number" id="storage" placeholder="Enter storage percentage" min="0" step="any">
+                
+                <label for="wastage">Wastage (% of Material Cost):</label>
+                <input type="number" id="wastage" placeholder="Enter wastage percentage" min="0" step="any">
             </div>
         </div>
 
         <div class="results-area">
             <button id="submit">Calculate Costs</button>
-            <div class="results">
-                <div>Total Cost of Raw Materials: <span id="totalRawMaterialCost">0</span></div>
-                <div>Total Machinery Cost: <span id="totalMachineryCost">0</span></div>
-                <div>Total Cost of Production: <span id="totalCost">0</span></div>
-                <div>Cost of Production per Kg: <span id="costPerKg">0</span></div>
-            </div>
+            <div>Total Raw Material Cost: <span id="totalRawMaterialCost">0</span></div>
+            <div>Total Machinery Cost: <span id="totalMachineryCost">0</span></div>
+            <div>Total Additional Costs: <span id="totalAdditionalCosts">0</span></div>
+            <div>Total Cost of Production: <span id="totalCost">0</span></div>
+            <div>Cost of Production per Kg: <span id="costPerKg">0</span></div>
         </div>
     </main>
 
     <script src="script.js"></script>
 </body>
 </html>
+
